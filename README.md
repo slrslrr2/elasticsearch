@@ -611,3 +611,24 @@ GET my_index2/_search
 
 > https://esbook.kimjmin.net/06-text-analysis/6.7-stemming/6.7.2-nori
 
+
+-------
+
+| 구분1                     | 구분2          | game/gameserver | subject | content |
+| ------------------------- | -------------- | --------------- | ------- | ------- |
+| **char_filter**           | html_strip     | -               | -       | O       |
+|                           | mapping        | -               | -       | △       |
+|                           | 정규식         | -               | -       | -       |
+| **tokenizer**             | standard       |                 |         |         |
+|                           | Letter         | -               | -       | -       |
+|                           | Whitespace     | -               | -       | -       |
+|                           | UAX URL Email  | -               | -       | -       |
+|                           | Pattern        | -               | -       | -       |
+|                           | path_hierarchy | -               | -       | -       |
+| **filter** (token_filter) | Lowercase      | O               | O       | O       |
+|                           | uppercase      | -               | -       | -       |
+|                           | synonyms_path  | O               | -       | -       |
+|                           | **ngram**      | -               | O?      | O?      |
+|                           | **Edge NGram** | O               | -       | -       |
+|                           | unique         | -               | O       | O       |
+
