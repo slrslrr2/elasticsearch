@@ -211,7 +211,7 @@ GET /new_twitter/_doc/9
 실제 운영시 version_type, op_type를 용도에 맞게 적절하게 사용하면 원하는 결과를 얻을 수 있을 것이다.
 
 기억해야할 마지막 부분은 reindex는 scroll batch로 돌아간다는 것이다. 
-즉 default size=1000 개로 나누어서 가져온다. 이 사이즈는 아래와 같이 조정이 가능하다.
+즉 default size=1000 개로 나누어서 가져온다. 이 사이즈는 아래와 같이 조정이 가능하다. 
 
 ``` java
 POST /_reindex
